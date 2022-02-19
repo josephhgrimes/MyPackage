@@ -1,0 +1,12 @@
+Package: MyPackage
+Type: Package
+Title: For Applied Statistical Methods
+Version: 0.1.0
+Author: Joseph Grimes
+Maintainer: Joseph Grimes <joseph.grimes@ou.edu>
+Description: This package was created for use within the Applied Statistical
+        Methods course that I took at OU.
+License: GPL-2?
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.1.2
