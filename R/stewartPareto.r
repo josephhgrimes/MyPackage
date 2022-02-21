@@ -4,12 +4,12 @@
 #'
 #' @param x vector
 #'
-#' @examples smithPareto(c(1,2,3,4,5,6,7))
+#' @examples stewartPareto(c("fire","fire","heart","heart","heart"))
 #'
 #'
 #' @export
 
-smithPareto = function(x,mn="Pareto barplot",...){  # x is a vector
+stewartPareto = function(x,mn="Pareto barplot",...){  # x is a vector
 x.tab=table(x)
 xx.tab=sort(x.tab, decreasing=TRUE,index.return=FALSE)
 cumsum(as.vector(xx.tab))->cs
