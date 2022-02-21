@@ -13,7 +13,7 @@ stewartPareto(x, mn = "Pareto barplot", ...)
 This function will take in a vector and produce a Pareto barplot
 }
 \examples{
-smithPareto(c("fire","fire","heart","heart","heart"))
+stewartPareto(c("fire","fire","heart","heart","heart"))
 
 
 }
