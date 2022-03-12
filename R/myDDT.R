@@ -6,7 +6,8 @@
 #' @param ddt ddt dataframe
 #' @param speciesType string value indiciating the fish species type
 #'
-#' @import ggplot2 dplyr
+#' @import ggplot2
+#' @import dplyr
 #' @importFrom utils write.csv
 #'
 #' @export
@@ -20,13 +21,13 @@ myDDT <- function(ddt, speciesType){
     dplyr::filter(SPECIES == speciesType)
 
   # Creating ggplot of LENGTH vs WEIGHT with a quadratic curve from the data
-  ggplot(ddtAltered, aes(LENGTH, WEIGHT)) +
+  ddtPlot <- ggplot(ddtAltered, aes(LENGTH, WEIGHT)) +
     geom_point(aes(color = RIVER)) +
     stat_smooth(aes(LENGTH, WEIGHT), method = "lm", formula = y ~ x + I(x^2)) +
     labs(title = "Joseph Grimes")
 
   # Printing ggplot
-  #print(ddtPlot)
+  print(ddtPlot)
 
   # The names of the ddt dataframe used to make the plot, ddtAltered,
   # and the ddt dataframe before subsetting, ddt
