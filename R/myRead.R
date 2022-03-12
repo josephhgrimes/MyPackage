@@ -5,8 +5,9 @@
 #'
 #' @param csv Alphanumeric file path
 #'
-#' @examples myread("SPRUCE.csv")
-#' 
+#' @examples \dontrun{myRead("SPRUCE.csv")}
+#'
+#' @importFrom utils read.table
 #'
 #' @export
 myRead=function(csv){

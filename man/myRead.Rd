@@ -14,7 +14,6 @@ This function will read in CSV files in a way that is preferable to use in
 class.
 }
 \examples{
-myread("SPRUCE.csv")
-
+\dontrun{myRead("SPRUCE.csv")}
 
 }

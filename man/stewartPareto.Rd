@@ -4,16 +4,17 @@
 \alias{stewartPareto}
 \title{Build Pareto graph}
 \usage{
-stewartPareto(x, mn = "Pareto barplot", ...)
+stewartPareto(x, mn = "Pareto barplot")
 }
 \arguments{
 \item{x}{vector}
+
+\item{mn}{title}
 }
 \description{
 This function will take in a vector and produce a Pareto barplot
 }
 \examples{
-stewartPareto(c("fire","fire","heart","heart","heart"))
-
+\dontrun{stewartPareto(c("fire","fire","heart","heart","heart"))}
 
 }

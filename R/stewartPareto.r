@@ -3,13 +3,15 @@
 #' This function will take in a vector and produce a Pareto barplot
 #'
 #' @param x vector
+#' @param mn title
 #'
-#' @examples stewartPareto(c("fire","fire","heart","heart","heart"))
+#' @examples \dontrun{stewartPareto(c("fire","fire","heart","heart","heart"))}
 #'
+#' @importFrom graphics axis barplot curve polygon segments title
 #'
 #' @export
 
-stewartPareto = function(x,mn="Pareto barplot",...){  # x is a vector
+stewartPareto = function(x, mn="Pareto barplot"){  # x is a vector
 x.tab=table(x)
 xx.tab=sort(x.tab, decreasing=TRUE,index.return=FALSE)
 cumsum(as.vector(xx.tab))->cs
@@ -20,6 +22,6 @@ axis(side=4,at=lb,labels=paste(seq(0,100,length=11),"%",sep=""),las=1,line=-1,co
 for(i in 1:(lenx-1)){
 segments(bp[i],cs[i],bp[i+1],cs[i+1],col=i,lwd=2)
 }
-title(main=mn,...)
+title(main=mn)
 
 }
