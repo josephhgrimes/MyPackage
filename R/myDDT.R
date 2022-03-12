@@ -43,7 +43,6 @@ myDDT <- function(ddt, speciesType){
   # Write dataframe used to make plot to CSV
   csvFileName = paste0("LvsWfor",speciesType)
   write.csv(ddtAltered, csvFileName, row.names = TRUE)
-
 }
 
 
